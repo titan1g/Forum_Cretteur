@@ -1,0 +1,286 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+body, * {
+    margin: 0;
+    padding: 0;
+    font-family: cursive; 
+    text-decoration: none;
+    overflow-x: hidden;
+}
+
+.page-index {
+    width: 100vw;
+    min-height: 100vh;
+    display: block;
+    background-color: #eee;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    text-align: center;
+    transform: translate(0px, 130px);
+    height: 10%;
+    background-color: #343a40!important;
+    max-width: 1000px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+h1, h2 {
+    margin-top: 0;
+    
+    color: black;
+}
+
+.Info {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    align-content: flex-start;
+}
+
+.less-essential {
+    width: 40%;
+    margin: 20px 20px 20px 20px;
+    border: solid 2px black;
+    border-radius: 10px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+.formcom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+.divsCom {
+    display: flex;
+    flex-direction: column;
+}
+.less-essential2 {
+    width: 95%;
+    margin: 20px 20px 20px 20px;
+    border: solid 2px black;
+    border-radius: 10px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+.essential {
+    margin: 150px 0px 120px 0px;
+    min-width: 25%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 50px;
+}
+.SettingAd{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 10%;
+    padding-left: 60%;
+}
+.account {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 50%;
+}
+
+.AccountImg {
+    border-radius: 50%;
+    clip-path: ellipse(50% 50%);
+}
+.inputPP {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 37%;
+    min-height: 37%;
+    border: dotted;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.pp {
+    display: inline;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.mt-4, .my-4 {
+    margin-top: 1.5rem!important;
+}
+.text-white {
+    color: #fff !important;
+}
+
+.font-weight-bold {
+    font-weight: 700!important;
+}
+h1, h2, h3, h4, h5, h6{
+    font-weight: 300;
+}
+
+.h5, h5 {
+    margin-bottom: 2.5rem;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    
+}
+
+h1, h2, h3, h4, h5, h6 :not(testttt) {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+
+.bg-dark {
+    background-color: #343a40!important;
+}
+
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+/*  PARTIE J'accepte ces conditions */
+
+.btn-danger, .btn-info, .btn-primary, .btn-success, .btn-warning {
+    color: #fff!important;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    font-size: 18px;
+    line-height: 1.33;
+    padding: 10px 16px;
+    border-radius: 6px;
+}
+
+.btn {
+    font-weight: 700; 
+    transition: background .2s;
+    border: 0 none;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+}
+
+.btn-success, .btn-success.disabled, .btn-success.disabled.active, .btn-success.disabled:active, .btn-success.disabled:focus, .btn-success.disabled:hover, .btn-success[disabled], .btn-success[disabled].active, .btn-success[disabled]:active, .btn-success[disabled]:focus, .btn-success[disabled]:hover, .label-success, .progress-bar-success, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success.active, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success:hover {
+    background-color: #2dcb73;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.divtest {
+    animation: fadeIn 1.5s;
+    width: 350px;
+    margin: 135px 20px 20px 20px;
+    border: solid 2px black;
+    border-radius: 10px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    
+}
+
+button {
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+    align-items: flex-start; 
+    overflow: visible; 
+}
+
+/*  PARTIE Je refuse conditions */
+
+.alert>p+p, .btn-block+.btn-block {
+    margin-top: 5px;
+}
+
+.btn-danger, .btn-danger.disabled, .btn-danger.disabled.active, .btn-danger.disabled:active, .btn-danger.disabled:focus, .btn-danger.disabled:hover, .btn-danger[disabled], .btn-danger[disabled].active, .btn-danger[disabled]:active, .btn-danger[disabled]:focus, .btn-danger[disabled]:hover, .label-danger, .progress-bar-danger, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger.active, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger:hover {
+    background-color: #d24d33;
+}

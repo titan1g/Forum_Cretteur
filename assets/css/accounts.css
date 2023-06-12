@@ -1,0 +1,144 @@
+body, * {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    color: black;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+.page-index {
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #eee;
+    display: block;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    text-align: center;
+    color: rebeccapurple;
+   
+    background-color: #343a40!important;
+    max-width: 1000px;
+    width: 100%;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-right: auto;
+    margin-left: auto;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+h1, h2 {
+    margin-top: 0;
+    
+    color: white;
+}
+.allAccount {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+}
+.Account {
+    width: 350px;
+    margin: 20px 20px 20px 20px;
+    border: solid 2px black;
+    border-radius: 10px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+.account {
+    margin: 150px 0px 120px 0px;
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+
+.mt-4, .my-4 {
+    margin-top: 1.5rem!important;
+}
+
+.container {
+   
+    max-width: 1000px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.text-white {
+    color: #fff !important;
+}
+
+.font-weight-bold {
+    font-weight: 700!important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+.h5, h5 {
+    margin-bottom: 2.5rem;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+
+.bg-dark {
+    background-color: #343a40!important;
+}
+
+
+.card {
+    margin-right: auto;
+    margin-left: auto;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+    position: relative;
+    top: 200px;
+    left: 40px;
+    width: 1000px;
+    width: auto;
+    height:auto
+    
+}

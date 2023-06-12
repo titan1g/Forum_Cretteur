@@ -1,0 +1,210 @@
+body, * {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    color: black;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+.page-index {
+    width: 100vw;
+    min-height: 100vh;
+    display: block;
+    background-color: #eee;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    text-align: center;
+    transform: translate(0px, 130px);
+    height: 100px;
+}
+.form {
+    position: absolute;
+    width: 670px;
+    right: 250px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    margin: 250px 20px 20px 20px;
+    border: solid 3px black;
+    border-radius: 10px;
+    justify-content: center;
+}
+.button {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.switch {
+    display: flex;
+    flex-direction: column;
+    transform: translate(0px, 198px);
+    align-items: center;
+}
+.message {
+    position: absolute;
+    top: 523px;
+    left: 375px;
+    width: 250px;
+    border: black 3px solid;
+    border-radius: 20px;
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+}
+.buttoninput {
+    font-size: 17px;
+}
+.inputbtn {
+    position: absolute;
+    left: 273px;
+    top: 132px;
+}
+/*  PARTIE Réglement du FORUM */
+
+
+
+.mt-4, .my-4 {
+    margin-top: 1.5rem!important;
+}
+
+.container {
+   
+    max-width: 1000px;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.text-white {
+    color: #fff !important;
+}
+
+.font-weight-bold {
+    font-weight: 700!important;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+}
+
+.h5, h5 {
+    margin-bottom: 2.5rem;
+    font-size: 25px;
+    text-align: center;
+
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-weight: 500;
+    
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    color: white;
+}
+
+
+.bg-dark {
+    background-color: #343a40!important;
+}
+
+
+.card {
+    position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: .25rem;
+}
+
+/*  PARTIE J'accepte ces conditions */
+
+.btn-danger, .btn-info, .btn-primary, .btn-success, .btn-warning {
+    color: #fff!important;
+}
+
+.btn-group-lg>.btn, .btn-lg {
+    font-size: 18px;
+    line-height: 1.33;
+    padding: 10px 16px;
+    border-radius: 6px;
+}
+
+.btn {
+    font-weight: 700; 
+    transition: background .2s;
+    border: 0 none;
+    margin-bottom: 0;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+}
+
+.btn-success, .btn-success.disabled, .btn-success.disabled.active, .btn-success.disabled:active, .btn-success.disabled:focus, .btn-success.disabled:hover, .btn-success[disabled], .btn-success[disabled].active, .btn-success[disabled]:active, .btn-success[disabled]:focus, .btn-success[disabled]:hover, .label-success, .progress-bar-success, fieldset[disabled] .btn-success, fieldset[disabled] .btn-success.active, fieldset[disabled] .btn-success:active, fieldset[disabled] .btn-success:focus, fieldset[disabled] .btn-success:hover {
+    background-color: #2dcb73;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+
+}
+
+button, html input[type=button], input[type=reset], input[type=submit] {
+    -webkit-appearance: button;
+    
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    
+}
+
+button {
+    text-rendering: auto;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-indent: 0px;
+    text-shadow: none;
+    align-items: flex-start; 
+    overflow: visible; 
+}
+
+/*  PARTIE Je refuse conditions */
+
+.alert>p+p, .btn-block+.btn-block {
+    margin-top: 5px;
+}
+
+.btn-danger, .btn-danger.disabled, .btn-danger.disabled.active, .btn-danger.disabled:active, .btn-danger.disabled:focus, .btn-danger.disabled:hover, .btn-danger[disabled], .btn-danger[disabled].active, .btn-danger[disabled]:active, .btn-danger[disabled]:focus, .btn-danger[disabled]:hover, .label-danger, .progress-bar-danger, fieldset[disabled] .btn-danger, fieldset[disabled] .btn-danger.active, fieldset[disabled] .btn-danger:active, fieldset[disabled] .btn-danger:focus, fieldset[disabled] .btn-danger:hover {
+    background-color: #d24d33;
+}

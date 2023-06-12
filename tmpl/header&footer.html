@@ -1,0 +1,96 @@
+<!-----------------
+  CONTENT POUR LE HEADER
+ ----------------->
+{{define "header"}}
+<link rel="stylesheet" href="../assets/css/header.css" />
+<div class="header">
+    <div class="project-forum">
+
+        <div class="Index">
+            <a class="Index-body" href="/">
+                <div href="/" class="Index-text">Accueil</div>
+            </a>
+        </div>
+        <div class="pages-container">
+            <div class="pages">
+                <div class="location">
+                    <a id="location" href="accounts">All Accounts</a>
+                </div>
+                <div class="groups">
+                    <a id="artists" href="topics">Topics</a>
+                </div>
+                <div class="dates">
+                    <a id="dates" href="dates" style="opacity: 0;">Dates</a>
+                </div>
+                {{if .Connected}}
+                <div class="info">
+                    <img id="Info" class="info_pp" src="../assets/image/Account_pp/{{.Account.Profile_Picture}}">
+                </div>
+                {{else}}
+                <div class="login">
+                    <a id="login" href="login">Login</a>
+                </div>
+                {{end}}
+            </div>
+        </div>
+    </div>
+    <div class="hide">
+        <a id="profile" href="information">Profil</a>
+        <a id="settings" href="settings">Settings</a>
+        <a id="logout" href="logout">Logout</a>
+    </div>
+    <script type="text/javascript" src="../assets/js/header.js"></script>
+    <script>
+        window.onscroll = () => {
+         var navbar = document.getElementsByClassName("header")[0];
+         if (window.scrollY > 1) {
+           navbar.classList.add("u-scrolled");
+         } else {
+           navbar.classList.remove("u-scrolled");
+         }
+       };
+    </script>
+</div>
+{{end}}
+
+<!-----------------
+  CONTENT POUR LE FOOTER
+ ----------------->
+{{define "footer"}}
+<link rel="stylesheet" href="../assets/css/footer.css" />
+<div class="footer">
+    <div class="team">
+        <div class="s-column">
+            <h3>The Team</h3>
+            <a>Florian Cretteur</a>
+    
+        </div>
+    </div>
+    <div class="aus">
+        <div class="aboutus">
+            <a href="#top">
+                <h4>About us</h4>
+            </a>
+        </div>
+    </div>
+    <div class="githubdiv">
+        <div class="footer-container">
+            <div class="link">
+                <a href="https://github.com/titan1g">
+                    <div class="github">
+                        <img src="../assets/image/icon/github.png" width="60" height="60">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="cus">
+        <div class="contactus">
+            <a href="mailto:florian.cretteur@ynov.com">
+                <h4>Contact us</h4>
+            </a>
+        </div>
+    </div>
+    <div class="inutile"></div>
+</div>
+{{end}}

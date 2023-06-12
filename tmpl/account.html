@@ -1,0 +1,270 @@
+<!--
+    Template for all accounts
+-->
+{{define "accounts"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/accounts.css">
+    <link rel="icon" sizes="16x16" href="./assets/image/Icon/Logo.png">
+    <title>Project Forum</title>
+</head>
+
+<body>
+    {{template "header" .Account}}
+    <div class="page-index">
+        <div class="card">
+            <div class="title">
+                <h1>Accounts</h1>
+                <h2>Show all accounts existing on the site</h2>
+            </div>
+            {{template "singleAccount" .}}
+        </div>
+    </div>
+
+    </div>
+    {{template "footer" .}}
+</body>
+
+</html>
+{{end}}
+
+<!--
+    Template for your account
+-->
+{{define "account"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/account.css">
+    <script type="text/javascript" src="../assets/js/AccountPict.js"></script>
+    <link rel="icon" sizes="16x16" href="./assets/image/Icon/Logo.png">
+    <title>Project Forum</title>
+</head>
+
+<body>
+    {{template "header" .}}
+    <div class="page-index">
+        <div class="title">
+            <h1>Account</h1>
+            <h2>Informations about your account</h2>
+        </div>
+        <div class="Info">
+            <div class="account">
+                <div class="essential">
+                    <h3>{{.Account.Name}}</h3>
+                    <div class="container">
+                        <img class="pp" src="..\assets\image\Account_pp\{{.Account.Profile_Picture}}" />
+                    </div>
+                </div>
+                <div class="less-essential">
+                    <br>
+                    <p>Email : {{.Account.Email}}</p><br>
+                    <p>Uuid : {{.Account.Uuid}}</p><br>
+                    <p>Role : {{.Account.Role}}</p><br>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{template "footer" .}}
+</body>
+
+</html>
+{{end}}
+
+
+<!--
+    Template for a user account
+-->
+{{define "user_account"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/account.css">
+    <link rel="icon" sizes="16x16" href="./assets/image/Icon/Logo.png">
+    <title>Project Forum</title>
+</head>
+
+<body>
+    {{template "header" .Login}}
+    {{$Role := .Login.Account.Role}}
+    {{$Uuid := .Login.Account.Uuid}}
+    <div class="page-index">
+        <div class="title">
+            <h1>Account</h1>
+            <h2>Informations about {{.Account.Name}} account</h2>
+        </div>
+        {{if (and (and (ne $Uuid .Account.Uuid) (eq $Role "Admin")) (ne .Account.Role "Admin"))}}
+        <div class="SettingAd">
+            <a href="/user_account_settings">coucou</a>
+        </div>
+        {{end}}
+        <div class="Info">
+            <div class="account">
+                <div class="essential">
+                    <h3 class="testttt">{{.Account.Name}}</h3>
+                    <div class="container">
+                        <img class="pp" src="..\assets\image\Account_pp\{{.Account.Profile_Picture}}" />
+                    </div>
+
+                </div>
+                <div class="less-essential">
+                    <br>
+                    <p>Email : {{.Account.Email}}</p><br>
+                    <p>Role : {{.Account.Role}}</p><br>
+                </div>
+                {{template "ComAccount" .}}
+            </div>
+        </div>
+
+    </div>
+    </div>
+    {{template "footer" .}}
+</body>
+
+</html>
+{{end}}
+
+
+<!--
+    Template for your account settings
+-->
+{{define "settings"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/account.css">
+    <script type="text/javascript" src="../assets/js/AccountPict.js"></script>
+    <link rel="icon" sizes="16x16" href="./assets/image/Icon/Logo.png">
+    <title>Project Forum</title>
+</head>
+
+<body>
+    {{template "header" .}}
+    <div class="page-index">
+        <div class="title">
+            <h1>Account</h1>
+            <h2>Informations about your account</h2>
+        </div>
+        <div class="Info">
+            <div class="account">
+                <div class="essential">
+                    <br>
+                    <!-- <h3>{{.Account.Name}}</h3> -->
+                    <p>{{.Account.Name}}</p>
+                    <div class="container">
+                        <img class="pp" src="..\assets\image\Account_pp\{{.Account.Profile_Picture}}" />
+                    </div>
+                    <form method="POST" enctype="multipart/form-data" action="/upload_pp" class="inputPP">
+                        <input type="hidden" name="path" value="Account_pp">
+                        <input type="file" name="AddPP" accept="image/png">
+                        <input type="submit">
+                    </form>
+                </div>
+                <form action="/updateaccount_by_user" method="POST">
+                    <input type="hidden" name="state" value="updcompte">
+                    <input type="hidden" name="Uuid" value="{{.Account.Uuid}}">
+                    <div class="essential">
+                        <br>
+                        <input placeholder="Change your name" name="Name">
+                        <p>Email : {{.Account.Email}}</p>
+                        <p>Uuid : {{.Account.Uuid}}</p>
+                        <p>Role : {{.Account.Role}}</p>
+                        <input type="submit">
+                    </div>
+                </form>
+                
+                <form method="GET" action="/change_passwd">
+                    <div class="essential">
+                        <br>
+                        <input type="hidden" name="State" value="changepasswd">
+                        <input placeholder="Type your current password" type="password" name="current_passwd">
+                        <input placeholder="Type your new password" type="password" name="new_passwd1">
+                        <input placeholder="Re-type your new password" type="password" name="new_passwd2">
+                        <input type="submit">
+                     </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+    {{template "footer" .}}
+</body>
+
+</html>
+{{end}}
+
+<!--
+    Template for a user account settings via admin perm
+-->
+{{define "user_account_settings"}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/account.css">
+    <link rel="icon" sizes="16x16" href="./assets/image/Icon/Logo.png">
+    <title>Project Forum</title>
+</head>
+
+<body>
+    {{template "header" .Login}}
+    <div class="page-index">
+        <div class="title">
+            <h1>Account</h1>
+            <h2>Informations about {{.Account.Name}} account</h2>
+        </div>
+        <form action="/updaccount" method="POST">
+            <input type="hidden" name="state" value="updcompte">
+            <input type="hidden" name="Uuid" value="{{.Account.Uuid}}">
+            <div class="Info">
+                <div class="account">
+                    <div class="essential">
+                        <input value="{{.Account.Name}}" name="Name">
+                        <div class="container">
+                            <img class="pp" src="..\assets\image\Account_pp\{{.Account.Profile_Picture}}" />
+                        </div>
+
+                    </div>
+                    <div class="less-essential">
+                        <br>
+                        <p>Email : {{.Account.Email}}</p><br>
+                        <select name="Role">
+                            <option value="Admin">Admin</option>
+                            <option value="Moderator">Moderator</option>
+                            <option value="User" selected>User</option>
+                        </select>
+                        <br>
+                        <p>Role : {{.Account.Role}}</p><br>
+                    </div>
+
+                </div>
+
+            </div>
+            <input type="submit">
+        </form>
+    </div>
+    {{template "footer" .}}
+</body>
+
+</html>
+{{end}}

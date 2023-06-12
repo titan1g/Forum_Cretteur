@@ -1,0 +1,100 @@
+body, * {
+    margin: 0;
+    padding: 0;
+    font-family: cursive;
+    color: black;
+    text-decoration: none;
+    overflow-x: hidden;
+}
+.page-index {
+    width: 100vw;
+    min-height: 100vh;
+    display: block;
+    background-color: #eee;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    text-align: center;
+    transform: translate(0px, 130px);
+    height: 100px;
+}
+.form {
+    width: 670px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    align-content: space-between;
+    border: solid 3px black;
+    border-radius: 10px;
+    justify-content: center;
+}
+.button {
+    height: 100px;
+    display: flex;
+    width: 8%;
+    border: gray 3px solid;
+    border-radius: 12%;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.switch {
+    display: flex;
+    flex-direction: column;
+    transform: translate(0px, 198px);
+    align-items: center;
+    row-gap: 15px;
+}
+.message {
+    width: 250px;
+    border: black 3px solid;
+    border-radius: 20px;
+    padding: 5px 5px 5px 5px;
+    display: flex;
+    justify-content: right;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: column;
+}
+.buttoninput {
+    font-size: 15px;
+    font-weight: bold;
+}
+.place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 150px;
+    height: 300px;
+    align-content: flex-end;
+    padding-top: 230px;
+    padding-left: 401px;
+}
+.formCreate {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+.Acc {
+    text-decoration: underline;
+}
+.inputbtn {
+    display: flex;
+    justify-content: center;
+    padding-top: 2%;
+}
+.invalid {
+    color: red;
+ }
+ .invalid:before {
+    content: "✖";
+ }
+ .valid {
+     color: green; 
+ }
+ .valid:before {
+     content: "✔";
+ }
