@@ -1,0 +1,24 @@
+{{ define "content" }}
+<p class="lead"><a href="/thread/new">Start a thread</a> or join one below!</p>
+
+{{ range .AllThreads }}
+
+<div class="card">
+  <div class="card-title">
+    <a href="/t/{{.Slug}}">
+      <span> <i class="fa fa-comment-o"></i> {{ .Topic }}</span>
+    </a>
+  </div>
+  <div class="card-body">
+    <div class="card-text">
+      Created by {{ .User.UserName }} - {{ .CreatedAtDate }} - {{ .NumReplies}}
+      replies
+
+      <div class="link">
+        <a href="/t/{{.Slug}}">Read more</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{ end }} {{ end }}

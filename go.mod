@@ -1,8 +1,10 @@
-module github.com/Alexiiisv/Project-Forum/v2
+module Forum
 
 go 1.16
 
 require (
-	github.com/gofrs/uuid v4.4.0+incompatible
-	golang.org/x/crypto v0.9.0
+	github.com/google/uuid v1.2.0
+	github.com/julienschmidt/httprouter v1.3.0
+	github.com/lib/pq v1.10.2
+	github.com/stoewer/go-strcase v1.2.0
 )

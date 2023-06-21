@@ -1,0 +1,48 @@
+{{ define "content" }}
+
+<div class="card">
+  <div class="pull-right">
+    Started by {{.SingleThread.User.UserName }} - {{
+    .SingleThread.CreatedAtDate}}
+  </div>
+  <div class="card-title">
+    <h1>{{ .SingleThread.Topic }}</h1>
+  </div>
+
+  <div class="card-text">{{.SingleThread.Discussion}}</div>
+  {{ range .SingleThread.Posts }}
+
+  <div class="card mb-1">
+    <div class="card-body">
+      <div class="card-text">
+        <div>{{ .CreatedAtDate }}</div>
+        <div>{{ .User.UserName }} said</div>
+        <span class="lead"> {{ .Body }}</span>
+      </div>
+    </div>
+  </div>
+
+  {{ end }}
+</div>
+
+<div class="form-control">
+  <div class="form">
+    <form role="form" action="/thread/post" method="post">
+      <div class="form-group">
+        <textarea
+          class="form-control"
+          name="body"
+          id="body"
+          placeholder="Write your reply here"
+          rows="3"
+        ></textarea>
+        <input type="hidden" name="uuid" value="{{ .SingleThread.Uuid }}" />
+        <br />
+
+        <button class="btn btn-primary" type="submit">Reply</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+{{ end }}

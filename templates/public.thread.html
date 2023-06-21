@@ -1,0 +1,26 @@
+{{ define "content" }}
+
+<div class="card">
+  <div class="card-title">
+    <span class="lead"> {{ .Topic }}</span>
+    <div class="pull-right">
+      Started by {{ .User.UserName }} - {{ .CreatedAtDate }}
+    </div>
+  </div>
+
+  {{ range .Posts }}
+
+  <div class="card">
+    <div class="card-body">
+      <div class="card-text">
+        <div>{{ .CreatedAtDate }}</div>
+        <div>{{ .User.UserName }} said</div>
+        <span class="lead"> {{ .Body }}</span>
+      </div>
+    </div>
+  </div>
+
+  {{ end }}
+</div>
+
+{{ end }}

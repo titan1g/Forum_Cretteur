@@ -1,0 +1,25 @@
+{{ define "content" }}
+
+<form role="form" action="/thread/create" method="post">
+  <div class="lead">Start a new thread with the following topic</div>
+  <div class="form-group">
+    <textarea
+      class="form-control"
+      name="topic"
+      id="topic"
+      placeholder="Thread topic here"
+      rows="2"
+    ></textarea>
+
+    <div id="editor" class="form-control" name="discussion" id="discussion">
+      <textarea placeholder="Your discussion" rows="10"></textarea>
+    </div>
+    <br />
+    <br />
+    <button class="btn btn-lg btn-primary pull-right" type="submit">
+      Start this thread
+    </button>
+  </div>
+</form>
+
+{{ end }}
